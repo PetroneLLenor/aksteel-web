@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zábradlí — AK Steel</title>
+  <meta name="description" content="Ocelová zábradlí na míru. Kombinace oceli a dřeva, precizní řemeslo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+</head>
+<body class="page-gallery">
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.svg" alt="AK Steel" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#schodiste">Schodiště</a></li>
+        <li><a href="index.html#zabradli">Zábradlí</a></li>
+        <li><a href="index.html#nabytek">Nábytek</a></li>
+        <li><a href="index.html#onas">O nás</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="gallery-page">
+    <div class="gallery-page-header reveal">
+      <a href="index.html" class="back-link">&larr; Zpět</a>
+      <h1 class="section-title">Zábradlí</h1>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="gallery-group reveal">
+      <div class="gallery-grid">
+        <a href="images/zabradli/01/zabradli-01_01.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_01.png" alt="Zábradlí" loading="lazy"></a>
+        <a href="images/zabradli/01/zabradli-01_02.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_02.png" alt="Zábradlí" loading="lazy"></a>
+        <a href="images/zabradli/01/zabradli-01_03.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_03.png" alt="Zábradlí" loading="lazy"></a>
+        <a href="images/zabradli/01/zabradli-01_04.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_04.png" alt="Zábradlí" loading="lazy"></a>
+        <a href="images/zabradli/01/zabradli-01_05.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_05.png" alt="Zábradlí" loading="lazy"></a>
+        <a href="images/zabradli/01/zabradli-01_06.png" class="gallery-item" data-lightbox><img src="images/zabradli/01/zabradli-01_06.png" alt="Zábradlí" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/logo.svg" alt="AK Steel" class="footer-logo">
+      <span class="footer-text">&copy; 2026 AK Steel s.r.o.</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Zavřít">&times;</button>
+    <button class="lightbox-prev" aria-label="Předchozí">&#8249;</button>
+    <button class="lightbox-next" aria-label="Další">&#8250;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
