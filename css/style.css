@@ -474,6 +474,22 @@ a.contact-value:hover {
   color: var(--text-light);
 }
 
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-clickable {
+  display: block;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.contact-clickable:hover {
+  color: var(--text-light);
+}
+
 /* ============================================
    Footer
    ============================================ */
