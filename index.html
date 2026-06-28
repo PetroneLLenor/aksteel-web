@@ -1,192 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AK Steel — Ocelové konstrukce na míru</title>
-  <meta name="description" content="Navrhujeme a vyrábíme ocelová schodiště, zábradlí a nábytek na míru. Každý kus je originál.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AK Steel — výroba schodišť a zábradlí na míru</title>
+  <meta name="description" content="AK Steel — zakázková kovovýroba. Ocelová schodiště a zábradlí na míru. Návrh, výroba, montáž.">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=1">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png?v=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=22">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">
-        <img src="images/logo.svg" alt="AK Steel" class="nav-logo-img">
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#schodiste">Schodiště</a></li>
-        <li><a href="#zabradli">Zábradlí</a></li>
-        <li><a href="#nabytek">Nábytek</a></li>
-        <li><a href="#onas">O nás</a></li>
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="AK Steel — domů">
+      <img class="wordmark__img" src="images/logo-ak.png?v=1" alt="">
+      <span class="wordmark__text">AK STEEL</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Otevřít menu"
+            aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__panel" aria-label="Hlavní menu">
+      <button class="menu__close" id="menu-close" aria-label="Zavřít menu">&times;</button>
+      <ul class="menu__list">
+        <li><a href="#projekty">Projekty</a></li>
+        <li><a href="#kdo-jsme">Kdo jsme</a></li>
+        <li><a href="#proces">Proces</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
-      <button class="nav-burger" id="navBurger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="images/schodiste/04/schodiste-04_01.jpg" alt="Ocelové schodiště" loading="eager">
-    </div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="hero-line">Ocel.</span>
-        <span class="hero-line">Dřevo.</span>
-        <span class="hero-line">Na míru.</span>
-      </h1>
-      <a href="#schodiste" class="hero-cta">Naše práce</a>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Schodiště -->
-  <section class="section" id="schodiste">
-    <div class="section-header reveal">
-      <span class="section-label">01</span>
-      <h2 class="section-title">Schodiště</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="gallery-grid reveal">
-      <a href="images/schodiste/01/schodiste-01_01.jpg" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/01/schodiste-01_01.jpg" alt="Schodiště — minimalistický design" loading="lazy">
-      </a>
-      <a href="images/schodiste/04/schodiste-04_02.jpg" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/04/schodiste-04_02.jpg" alt="Schodiště — perforovaný plech" loading="lazy">
-      </a>
-      <a href="images/schodiste/10/schodiste-10_01.png" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/10/schodiste-10_01.png" alt="Schodiště — propalovaný plech" loading="lazy">
-      </a>
-      <a href="images/schodiste/13/schodiste-13_01.jpg" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/13/schodiste-13_01.jpg" alt="Schodiště — podkroví" loading="lazy">
-      </a>
-      <a href="images/schodiste/05/schodiste-05_01.jpg" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/05/schodiste-05_01.jpg" alt="Schodiště" loading="lazy">
-      </a>
-      <a href="images/schodiste/06/schodiste-06_01.jpg" class="gallery-item" data-lightbox>
-        <img src="images/schodiste/06/schodiste-06_01.jpg" alt="Schodiště" loading="lazy">
-      </a>
-    </div>
-    <div class="section-more reveal">
-      <a href="schodiste.html" class="btn-more">Všechna schodiště &rarr;</a>
-    </div>
-  </section>
-
-  <!-- Zábradlí -->
-  <section class="section section-alt" id="zabradli">
-    <div class="section-header reveal">
-      <span class="section-label">02</span>
-      <h2 class="section-title">Zábradlí</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="gallery-grid reveal">
-      <a href="images/zabradli/01/zabradli-01_01.png" class="gallery-item" data-lightbox>
-        <img src="images/zabradli/01/zabradli-01_01.png" alt="Zábradlí" loading="lazy">
-      </a>
-      <a href="images/zabradli/01/zabradli-01_02.png" class="gallery-item" data-lightbox>
-        <img src="images/zabradli/01/zabradli-01_02.png" alt="Zábradlí" loading="lazy">
-      </a>
-      <a href="images/zabradli/01/zabradli-01_03.png" class="gallery-item" data-lightbox>
-        <img src="images/zabradli/01/zabradli-01_03.png" alt="Zábradlí" loading="lazy">
-      </a>
-      <a href="images/zabradli/01/zabradli-01_04.png" class="gallery-item" data-lightbox>
-        <img src="images/zabradli/01/zabradli-01_04.png" alt="Zábradlí" loading="lazy">
-      </a>
-    </div>
-  </section>
-
-  <!-- Nábytek -->
-  <section class="section" id="nabytek">
-    <div class="section-header reveal">
-      <span class="section-label">03</span>
-      <h2 class="section-title">Nábytek</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="gallery-grid gallery-wide reveal">
-      <a href="images/nabytek/01/nabytek-01_01.png" class="gallery-item" data-lightbox>
-        <img src="images/nabytek/01/nabytek-01_01.png" alt="Designové lehátko" loading="lazy">
-      </a>
-      <a href="images/nabytek/01/nabytek-01_02.png" class="gallery-item" data-lightbox>
-        <img src="images/nabytek/01/nabytek-01_02.png" alt="Designové lehátko" loading="lazy">
-      </a>
-      <a href="images/nabytek/01/nabytek-01_03.png" class="gallery-item" data-lightbox>
-        <img src="images/nabytek/01/nabytek-01_03.png" alt="Designové lehátko" loading="lazy">
-      </a>
-    </div>
-  </section>
-
-  <!-- O nás -->
-  <section class="section section-alt" id="onas">
-    <div class="about-content reveal">
-      <span class="section-label">O nás</span>
-      <h2 class="about-title">Každý kus je originál</h2>
-      <div class="section-line"></div>
-      <p class="about-text">
-        Navrhujeme a vyrábíme ocelové konstrukce na míru — schodiště, zábradlí, nábytek.
-        Spojujeme ocel s dřevem, precizní řemeslo s moderním designem.
-        Žádné katalogové řešení. Každý projekt vzniká od nuly, přesně podle vašich představ a prostoru.
-      </p>
-    </div>
-  </section>
-
-  <!-- Kontakt -->
-  <section class="section" id="kontakt">
-    <div class="section-header reveal">
-      <span class="section-label">Kontakt</span>
-      <h2 class="section-title">Ozvěte se</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-grid reveal">
-      <div class="contact-item">
-        <span class="contact-label">Petr Kudrnáč</span>
-        <a href="tel:+420727875506" class="contact-value contact-clickable">+420 727 875 506</a>
-        <a href="mailto:kudrnac@aksteel.cz" class="contact-value contact-clickable">kudrnac@aksteel.cz</a>
+      <div class="menu__contact">
+        <a href="tel:+420727875506">+420&nbsp;727&nbsp;875&nbsp;506</a>
+        <a href="mailto:kudrnac@aksteel.cz">kudrnac@aksteel.cz</a>
       </div>
-      <div class="contact-item">
-        <span class="contact-label">Jiří Anděl</span>
-        <a href="tel:+420603586554" class="contact-value contact-clickable">+420 603 586 554</a>
-        <a href="mailto:andel@aksteel.cz" class="contact-value contact-clickable">andel@aksteel.cz</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">Adresa</span>
-        <span class="contact-value">Pálovice 68, 675 31</span>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">IČO</span>
-        <span class="contact-value">21360928</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <img src="images/logo.svg" alt="AK Steel" class="footer-logo">
-      <span class="footer-text">&copy; 2026 AK Steel s.r.o.</span>
-    </div>
-  </footer>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Zavřít">&times;</button>
-    <button class="lightbox-prev" aria-label="Předchozí">&#8249;</button>
-    <button class="lightbox-next" aria-label="Další">&#8250;</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </nav>
   </div>
 
-  <script src="js/main.js"></script>
+  <section class="hero" id="hero">
+    <img class="hero__img" id="hero-a"
+         src="images/web/AK-R8495_01.jpg"
+         alt="Ocelové schodiště na míru — realizace AK Steel">
+    <img class="hero__img hero__img--top" id="hero-b" alt="" aria-hidden="true">
+    <a class="hero__scroll" href="#projekty" aria-label="Posunout dolů">
+      <span aria-hidden="true">&darr;</span>
+    </a>
+  </section>
+
+  <section class="work" id="projekty">
+    <div class="projekty" id="projekty-list"></div>
+  </section>
+
+  <section class="about" id="kdo-jsme">
+    <h2 class="section-title">Kdo jsme</h2>
+    <div class="about__text">
+      <p>Dílna pro architektonickou ocel na pomezí Vysočiny a&nbsp;jižních Čech. Děláme schodiště a&nbsp;zábradlí — nejčastěji v kombinaci oceli, dřeva a&nbsp;skla, vždy navržená do konkrétního prostoru.</p>
+      <p>Od prvního konceptu po montáž ručíme za celek.</p>
+    </div>
+  </section>
+
+  <section class="proces" id="proces">
+    <h2 class="section-title">Proces</h2>
+    <p class="proces__intro">Každé schodiště vzniká do jiného prostoru. Od prvního setkání po hotovou montáž pokaždé jinak, vždy stejně poctivě.</p>
+    <ol class="proces__steps">
+      <li class="step">
+        <span class="step__num">1</span>
+        <div class="step__body">
+          <h3 class="step__title">Konzultace</h3>
+          <p class="step__text">Pošlete nám podklady — fotky prostoru, zaměření, svou představu. Probereme, co od schodiště očekáváte: někdy řešíme tvar i to, jak má v místě působit od úplného začátku, jindy přijdete s vlastním návrhem a hledáme, jak ho nejlépe realizovat. Domluvíme se e-mailem, telefonem i osobně — podle toho, co zakázka potřebuje.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num">2</span>
+        <div class="step__body">
+          <h3 class="step__title">Zaměření</h3>
+          <p class="step__text">Prostor přesně zaměříme ve 3D — skutečnou geometrii do posledního milimetru. Schodiště pak sedne na první dobrou, bez dolaďování na stavbě.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num">3</span>
+        <div class="step__body">
+          <h3 class="step__title">Návrh k odsouhlasení</h3>
+          <p class="step__text">Připravíme koncept a vizualizaci pro váš prostor. Schodiště uvidíte dřív, než cokoli vznikne — a odsouhlasíte si ho, než se začne vyrábět.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num">4</span>
+        <div class="step__body">
+          <h3 class="step__title">Výroba</h3>
+          <p class="step__text">Konstrukci vyrábíme my; díly a materiály, které to vyžadují — dřevo, sklo, komponenty — pořizujeme od prověřených partnerů. Z čeho se schodiště skládá, řídíme do posledního dílu.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num">5</span>
+        <div class="step__body">
+          <h3 class="step__title">Montáž</h3>
+          <p class="step__text">Hotové dílo osadíme u vás na stavbě. Co jsme navrhli a vyrobili, sami i postavíme na místo.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="contact-section" id="kontakt">
+    <p class="contact-section__line">Líbí se vám to? Víte, kde nás&nbsp;najdete.</p>
+    <div class="contact-section__people">
+      <div class="contact-person">
+        <span class="contact-person__name">Petr Kudrnáč</span>
+        <a href="tel:+420727875506">+420&nbsp;727&nbsp;875&nbsp;506</a>
+        <a href="mailto:kudrnac@aksteel.cz">kudrnac@aksteel.cz</a>
+      </div>
+      <div class="contact-person">
+        <span class="contact-person__name">Jiří Anděl</span>
+        <a href="tel:+420603586554">+420&nbsp;603&nbsp;586&nbsp;554</a>
+        <a href="mailto:andel@aksteel.cz">andel@aksteel.cz</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img class="footer__logo" src="images/logo-full.png?v=1" alt="AK Steel s.r.o.">
+    <p class="footer__legal">
+      AK Steel s.r.o. &middot; Pálovice 68, 675 31 Pálovice &middot; IČO 21360928 &middot; DIČ CZ21360928<br>
+      Zapsáno v obchodním rejstříku u Krajského soudu v Brně, sp.&nbsp;zn. C&nbsp;138559
+    </p>
+  </footer>
+
+  <script src="js/hero-images.js?v=3"></script>
+  <script src="js/hero.js?v=7"></script>
+  <script src="js/projekty-data.js?v=2"></script>
+  <script src="js/projekty.js?v=7"></script>
+  <script src="js/lightbox.js?v=3"></script>
+  <script src="js/menu.js?v=3"></script>
 </body>
 </html>
