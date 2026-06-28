@@ -462,11 +462,14 @@ body.menu-open { overflow: hidden; }
   color: var(--text-muted);
   max-width: 60ch;
 }
+/* logo + údaje firmy přesunuté do sekce Kontakt */
+.contact-section .footer__logo { margin-top: clamp(2.5rem, 6vh, 4rem); }
+.contact-section .footer__legal { margin-top: 1.1rem; }
 
 /* --- Dotace (povinná publicita EU) — decentně --- */
 .dotace {
   background: var(--bg-soft);
-  padding: clamp(1.5rem, 4vh, 2.5rem) var(--space) 0;
+  padding: clamp(2rem, 5vh, 3.5rem) var(--space);
   display: flex;
   flex-direction: column;
   align-items: center;
