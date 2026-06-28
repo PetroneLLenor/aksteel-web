@@ -462,3 +462,17 @@ body.menu-open { overflow: hidden; }
   color: var(--text-muted);
   max-width: 60ch;
 }
+
+/* --- Dotace (povinná publicita EU) --- */
+.dotace {
+  padding: clamp(2.5rem, 7vh, 4.5rem) var(--space);
+  display: flex;
+  justify-content: center;
+}
+.dotace__img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  display: block;
+  border: 1px solid #e8e6e1;
+}
