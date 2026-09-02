@@ -1,6 +1,8 @@
 /* Lightbox: klik na fotku v projektu ji zvětší (plná verze).
    Listování ‹ › / šipky / swipe v rámci JEDNOHO projektu. Zavře ×, Esc,
-   nebo klik mimo fotku. */
+   nebo klik mimo fotku.
+   Seznam fotek bere z DOM: všechny <img data-full> uvnitř .projekt
+   (staticky v index.html, generuje WEB 04/scripts/web_hero.py). */
 (function () {
   "use strict";
 
@@ -33,7 +35,8 @@
   function show(i) {
     if (!list.length) return;
     idx = (i + list.length) % list.length;
-    imgEl.src = list[idx];
+    imgEl.src = list[idx].src;
+    imgEl.alt = list[idx].alt;
     counterEl.textContent = (idx + 1) + " / " + list.length;
   }
 
@@ -54,11 +57,12 @@
   document.addEventListener("click", function (e) {
     var proj = e.target.closest(".projekt");
     if (!proj) return;
-    var media = proj.querySelector("[data-photos]");
-    if (!media) return;
-    var photos;
-    try { photos = JSON.parse(media.getAttribute("data-photos") || "[]"); }
-    catch (err) { photos = []; }
+    var imgs = proj.querySelectorAll("img[data-full]");
+    var photos = [];
+    for (var i = 0; i < imgs.length; i++) {
+      photos.push({ src: imgs[i].getAttribute("data-full"),
+                    alt: imgs[i].getAttribute("alt") || "" });
+    }
     if (photos.length) open(photos, 0);
   });
 

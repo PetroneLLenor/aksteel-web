@@ -112,6 +112,30 @@ a { color: inherit; text-decoration: none; }
   .hero__img--zoom { animation: none; }
 }
 
+/* Nadpis stránky (h1) — decentně v levém dolním rohu přes fotku.
+   Šířka omezená, aby nekolidoval se šipkou uprostřed. */
+.hero__title {
+  position: absolute;
+  left: var(--space);
+  bottom: clamp(1.2rem, 4vh, 2.4rem);
+  z-index: 2;
+  max-width: calc(50% - 2.5rem);
+  font-weight: 300;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--over);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+/* úzké displeje: nadpis nad šipku, ať nezalamuje na 3+ řádky */
+@media (max-width: 360px) {
+  .hero__title {
+    max-width: 78%;
+    bottom: calc(clamp(1.2rem, 4vh, 2.4rem) + 2.6rem);
+  }
+}
+
 .hero__scroll {
   position: absolute;
   left: 50%;
@@ -170,11 +194,21 @@ a { color: inherit; text-decoration: none; }
 }
 .projekt__media img {
   width: 100%;
+  height: auto;
   display: block;
   background: var(--bg-soft);
   transition: transform 0.6s ease;
 }
 .projekt:hover .projekt__media img { transform: scale(1.03); }
+/* Ostatní fotky projektu jsou v HTML (indexace, lightbox), zobrazí je až lightbox. */
+.projekt__rest { display: none; }
+.projekt__caption {
+  margin-top: 0.6em;
+  font-weight: 300;
+  font-size: clamp(0.8rem, 1.7vw, 0.92rem);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
 .projekt__info { flex: 1 1 44%; }
 .projekt__index {
   font-weight: 400;
